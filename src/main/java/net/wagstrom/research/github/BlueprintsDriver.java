@@ -585,6 +585,7 @@ public class BlueprintsDriver extends BlueprintsBase implements Shutdownable {
         }
         if (ghash == null) {
             log.warn("Unable to determine gravatar hash for [{}]", gravatarHash);
+            returnVertex = getOrCreateGravatar("teste");
         } else {
             returnVertex = getOrCreateGravatar(ghash);
         }
